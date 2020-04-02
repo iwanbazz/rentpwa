@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
+import HomeIcon from '@material-ui/icons/Home';
+import ListAltIcon from '@material-ui/icons/ListAlt';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>CV Riau Indah Cemerlang</h1>
+      <BottomNavigation>
+        <BottomNavigationAction label="Recents" icon={<HomeIcon />} />
+        <BottomNavigationAction label="Favorites" icon={<ListAltIcon />} />
+        <BottomNavigationAction label="Nearby" icon={<AccountBoxIcon />} />
+      </BottomNavigation>
     </div>
   );
 }
